@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Llamadas spam</title>
+   
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header class="header">
+      <h1 class="header__title">REPORTES DE LLAMADAS SPAM 🇵🇪</h1>
+
+      <p class="header__parrafo">Buscador de  números spam.</p>
+
+      <div class="header__buscador">
+         <input class="header__input" type="number" autofocus min="0" placeholder="123...">
+
+         <img class="header__gif" src="gif/contacto.gif" alt="gif llamada">
+      </div>
+
+      <span class="header__mensaje">...</span>
+
+   </header>
+   <main class="main">
+      <article class="article">
+         <h2 class="article__title">Deja tu comentario</h2>
+
+         <p class="article__parrafo">Si estás seguro de que recibes llamadas spam, deja dicho número en la caja de comentarios para que los demás lo sepan.</p>
+
+         <div class="article__comentarios">
+            <!-- <div id="fb-root"></div> -->
+            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v20.0" nonce="gYBEdVx5"></script>
+
+            <div class="fb-comments" data-href="https://llamadas-spam-peru.netlify.app" data-width="450" data-numposts="5"></div>
+
+         </div>
+      </article>
+
+      <section class="section">
+         <h3 class="section__title">Sobre esta página</h3>
+         <details class="details" open>
+            <summary class="summary">A tener en cuenta:</summary>
+            <div class="summary__div">
+               <p class="summary__parrafo">* Esta página está diseñado solo para exhibir esos números spam molestosos.</p>
+
+               <p class="summary__parrafo">* Esta página no recoge los números mostrados para gestionar algún tipo de denuncia o sanción a las empresas y/o personas responsables de dichas llamadas. </p>
+
+               <p class="summary__parrafo">* La idea principal de esta página es que si se recolecta datos suficientes, los organismos en contra de este tipo de prácticas puedan usarlos para hacer sus respectivas investigaciones y así sancionar a los responsables. </p>
+
+               <span class="summary__parrafo"> * Si lo que busca es denunciar al responsable de manera oficial, puede ingresar a este link: <a class="summary__link" href="https://sgd.minjus.gob.pe/sgd-virtual/public/ciudadano/ciudadanoMain.xhtml" target="_blank">https://sgd.minjus.gob.pe/sgd-virtual/public/ciudadano/ciudadanoMain.xhtml</a> 
+               
+               </span>
+
+               <p class="summary__parrafo">* Para hacer una publicación es necesario tener una cuenta de Facebook, para evitar publicaciones con malas intensiones.</p>
+            
+               <p class="summary__parrafo">* Se recomienda estar totalmente seguro que dichos números publicados sean realmente spam.</p>
+            </div>
+         </details>
+      </section>
+   </main>
+
+   <footer class="footer">
+      <h4 class="footer__title">¿Te sirvió esta página?</h4>
+      <p class="footer__parrafo">Compártelo en todas tus redes sociales.</p>
+
+      <div class="footer__span">
+         <p class="footer__copiado"></p>
+      </div>
+
+      <div class="footer__compartir">
+         <a class="footer__link" href="https://www.facebook.com/sharer.php?u=https://llamadas-spam-peru.netlify.app" target="_blank"><i class="footer__icon bi-facebook"></i></a>
+
+         <a class="footer__link" href="https://twitter.com/intent/tweet?text=https://llamadas-spam-peru.netlify.app" target="_blank"><i class="footer__icon bi-twitter-x"></i></a>
+
+         <a class="footer__link" href="https://api.whatsapp.com/send?text=https://llamadas-spam-peru.netlify.app" target="_blank"><i class="footer__icon bi-whatsapp"></i></a>
+
+         <a class="footer__link" href="mailto:?subject=&body=https://llamadas-spam-peru.netlify.app" target="_blank"><i class="footer__icon bi-envelope"></i></a>
+
+         <i class="footer__icon footer__icon-mod bi-share-fill" id="idCompartir"></i>
+      </div>
+   </footer>
+
+   <script src="main.js"></script>
+</body>
+</html>

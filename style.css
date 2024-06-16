@@ -1,0 +1,246 @@
+:root {
+   --color-1: #f4f4f4;
+   --color-2: #332F2B;
+   --color-7: #fdcb50;
+   --color-3: #FB8F01;
+   --color-4: #DC4C87;
+   --color-5: #FB7EA0;
+   --color-6: #8894BD;
+   --color-7: rgba(245, 245, 245, 0.5);
+   --color-8: rgba(51, 47, 43, 0.5);
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   box-sizing: border-box;
+   font-size: 100%;
+   font-family: "Kanit", sans-serif;
+}
+
+body {
+   background: url(img/fondo2.webp) center center no-repeat;
+   background-size: cover;
+   background-attachment: fixed;
+}
+
+.header {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+   row-gap: 15px;
+   padding: 50px 0 0 0
+}
+
+.header__title {
+   color: var(--color-2);
+   font-size: 1.2rem;
+   font-weight: 700;
+   padding: 0 0 15px 0;
+}
+
+.header__parrafo,
+.article__parrafo,
+.footer__parrafo {
+   color: var(--color-2);
+   font-size: 1.1rem;
+   font-weight: 400;
+}
+
+.header__buscador {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   column-gap: 10px;
+}
+
+.header__input {
+   background-color: var(--color-1);
+   color: var(--color-2);
+   width: 160px;
+   font-size: 1.1rem;
+   font-weight: 400;
+   outline: none;
+   border-radius: 5px;
+   padding: 10px 15px;
+}
+
+.header__gif {
+   max-width: 100%;
+   width: 45px;
+   border-radius: 5px;
+   cursor: pointer;
+   box-shadow: 1px 2px 5px var(--color-2);
+}
+
+.header__mensaje {
+   color: var(--color-2);
+   font-size: 1.2rem;
+   font-weight: 500;
+}
+
+.main {
+   width: 100%;
+   padding: 50px 10%;
+}
+   
+.article {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+}
+
+.article__title,
+.section__title {
+   color: var(--color-2);
+   font-size: 1.2rem;
+   font-weight: 600;
+   padding: 0 0 10px 0;
+}
+
+.article__comentarios {
+   background-color: var(--color-7);
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   border-radius: 5px;
+   gap: 30px;
+   margin: 20px 0 0 0;
+   padding: 20px ;
+}
+
+.fb-comments {
+   border-radius: 10px;
+   /* background-color: var(--color-6); */
+   /* box-shadow: 1px 2px 8px var(--color-2); */
+   padding: 10px;
+}
+
+.section {
+   width: 100%;
+   margin: 50px 0 0 0 ;
+}
+   
+.details {
+   background-color: var(--color-7);
+   width: 100%;
+   border-radius: 5px;
+   padding: 10px 20px;
+}
+
+.summary {
+   color: var(--color-2);
+   font-size: 1rem;
+   font-weight: 600;
+}
+
+.summary__div {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   padding: 10px 20px;
+}
+
+.summary__parrafo,
+.summary__link {
+   color: var(--color-2);
+   font-size: 1rem;
+   font-weight: 400;
+}
+
+.summary__link {
+   color: var(--color-3);
+}
+
+.footer {
+   background-color: var(--color-1);
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   row-gap: 10px;
+   padding: 40px 10% 50px 10%;
+}
+
+.footer__title {
+   color: var(--color-2);
+   font-size: 1.1rem;
+   font-weight: 600;
+}
+
+.footer__span {
+   display: none;
+   width: 100%;
+   align-items: center;
+   justify-content: center;
+}
+
+.footer__copiado {
+   background-color: var(--color-2);
+   color: var(--color-3);
+   display: inline-flex;
+   padding: 10px 15px;
+}
+
+.footer__compartir {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   column-gap: 20px;
+   padding: 20px 0 0 0;
+}
+
+.footer__link {
+   text-decoration: none;
+}
+
+.footer__icon {
+   display: flex;
+   background-color: var(--color-2);
+   color: var(--color-3);
+   font-size: 20px;
+   border-radius: 5px;
+   cursor: pointer;
+   padding: 10px;
+}
+
+@media (max-width: 800px) {
+   .main {
+      width: 100%;
+      padding: 50px 3%;
+   }
+
+   .article__comentarios {
+      background-color: transparent;
+      padding: 5px 0 ;
+   }
+
+   .fb-comments {
+      background-color: var(--color-7);
+      box-shadow: 1px 2px 8px var(--color-2);
+   }
+
+   .summary__div {
+      padding: 10px 10px;
+   }
+
+   .summary__parrafo {
+      font-size: 0.9rem;
+   }
+
+   .footer {
+      padding: 40px 5% 50px 5%;
+   }
+
+   .footer__compartir {
+      column-gap: 0;
+      justify-content: space-evenly;
+   }
+
+   .footer__icon-mod {
+      display: none;
+   }
+}
