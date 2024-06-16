@@ -5,7 +5,7 @@ const compartir = document.querySelector(".footer__icon-mod");
 const span = document.querySelector(".footer__span");
 const spanSms = document.querySelector(".footer__copiado");
 
-let arreglo = ["972229776", "94651944", "956456207", "930143374", "962758201", "952414598", "924489743","942290145","964308333","973511215"];
+let arreglo = ["972229776", "94651944", "956456207", "930143374", "962758201", "952414598", "924489743","942290145","964308333","973511215","948769612"];
 
 let url = "https://llamadas-spam-peru.netlify.app";
 
