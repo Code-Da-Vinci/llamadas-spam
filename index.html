@@ -18,10 +18,10 @@
    <header class="header">
       <h1 class="header__title">REPORTES DE LLAMADAS SPAM 🇵🇪</h1>
 
-      <p class="header__parrafo">Buscador de  números spam.</p>
+      <p class="header__parrafo">Buscador</p>
 
       <div class="header__buscador">
-         <input class="header__input" type="number" autofocus min="0" placeholder="123...">
+         <input class="header__input" type="number" autofocus min="0" placeholder="...">
 
          <img class="header__gif" src="gif/contacto.gif" alt="gif llamada">
       </div>
@@ -30,38 +30,60 @@
 
    </header>
    <main class="main">
-      <article class="article">
-         <h2 class="article__title">Deja tu comentario</h2>
+      <section class="section1">
+         <h2 class="section1__title">Números spam reportados a través de formulario</h2>
 
-         <p class="article__parrafo">Si estás seguro de que recibes llamadas spam, deja dicho número en la caja de comentarios para que los demás lo sepan.</p>
-
-         <div class="article__comentarios">
-            <div id="fb-root"></div>
-            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v20.0" nonce="gYBEdVx5"></script>
-
-            <div class="fb-comments" data-href="https://llamadas-spam-peru.netlify.app" data-width="450" data-numposts="5"></div>
+         <div class="section1__spam">
+            <!-- Aquí se agregarán los números spam reportados a travez del formulario -->
 
          </div>
+      </section>
+
+      <article class="article">
+         <h2 class="article__title">Completa el formulario</h2>
+         
+         <form class="form" action="https://formsubmit.co/wwwtheshield17@gmail.com" method="POST">
+            <!-- target="_blank" -->
+   
+            <input class="form__numero" type="text" name="name" placeholder="Reporta un número" title="Este campo solo admite números" pattern="^[0-9]*\.?[0-9]+$" required>
+            <!-- pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" este es solo para tipo "text" y no "number"-->
+   
+            <input class="form__email" type="email" name="email" placeholder="Ingresa tu email" title="Email incorrecto" pattern="^[a-z0-9]+([._a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
+
+            <!-- pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" -->
+
+            <!-- pattern="^[a-z0-9]+([._a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" -->
+   
+            <!-- <input type="text" name="subject" placeholder="Asunto" title="El asunto es requerido" required> -->
+   
+            <textarea class="form__comentario" name="comments" cols="50" rows="5" placeholder="Escribe algún comentario" title="Utiliza un máximo de 255 caracteres" data-pattern="^.{1,255}$" required></textarea>
+   
+            <div class="form__button">
+               <input class="form__enviar" type="submit" value="Enviar">
+
+            </div>
+         </form>
       </article>
 
-      <section class="section">
-         <h3 class="section__title">Sobre esta página</h3>
+      <section class="section2">
+         <h3 class="section2__title">Sobre esta página</h3>
          <details class="details" open>
             <summary class="summary">A tener en cuenta:</summary>
             <div class="summary__div">
                <p class="summary__parrafo">* Esta página está diseñado solo para exhibir esos números spam molestosos.</p>
+               
+               <p class="summary__parrafo">* El autor de esta página publicará solo los números enviados a través del formulario.</p>
+               
+               <p class="summary__parrafo">* Los correos y comentarios nunca serán publicados en ninguna parte de esta o ninguna otra página web. Los campos son necesarios y obligatorios para asegurar que no sean bots.</p>
 
                <p class="summary__parrafo">* Esta página no recoge los números mostrados para gestionar algún tipo de denuncia o sanción a las empresas y/o personas responsables de dichas llamadas. </p>
 
                <p class="summary__parrafo">* La idea principal de esta página es que si se recolecta datos suficientes, los organismos en contra de este tipo de prácticas puedan usarlos para hacer sus respectivas investigaciones y así sancionar a los responsables. </p>
 
-               <span class="summary__parrafo"> * Si lo que busca es denunciar al responsable de manera oficial, puede ingresar a este link: <a class="summary__link" href="https://sgd.minjus.gob.pe/sgd-virtual/public/ciudadano/ciudadanoMain.xhtml" target="_blank">https://sgd.minjus.gob.pe/sgd-virtual/public/ciudadano/ciudadanoMain.xhtml</a> 
-               
+               <span class="summary__parrafo"> * Si lo que busca es denunciar al responsable de manera oficial, puede ingresar a este link: <a class="summary__link" href="https://sgd.minjus.gob.pe/sgd-virtual/public/ciudadano/ciudadanoMain.xhtml" target="_blank">https://sgd.minjus.gob.pe/sgd-virtual/public/ciudadano/ciudadanoMain.xhtml</a>
                </span>
-
-               <p class="summary__parrafo">* Para hacer una publicación es necesario tener una cuenta de Facebook, para evitar publicaciones con malas intensiones.</p>
             
-               <p class="summary__parrafo">* Se recomienda estar totalmente seguro que dichos números publicados sean realmente spam.</p>
+               <p class="summary__parrafo">* Se recomienda estar totalmente seguro que dichos números enviados sean realmente spam.</p>
             </div>
          </details>
       </section>
