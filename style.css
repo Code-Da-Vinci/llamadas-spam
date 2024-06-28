@@ -120,6 +120,10 @@ body {
    padding: 10px 20px;
 }
 
+.section1__none {
+   display: none;  /* Solo para ocultar cualquier elemento */
+}
+
 /* ------- formulario ------- */
 
 .article {

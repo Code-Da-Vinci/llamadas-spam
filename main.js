@@ -36,44 +36,40 @@ const nrosVisibles = document.querySelectorAll(".section1__nro");
 
 function buscar(ev) {
    let ingreso = entrada.value.trim();
-   let ubicado = false; // Variable para rastrear si se encuentra una coincidencia
 
    if (ingreso === "") {
-      alert("Ingresa un número");
+      nrosVisibles.forEach((elem) => {
+         elem.classList.remove("section1__none");
+         elem.style.backgroundColor = ""; 
+         elem.style.color = ""; 
 
-   } else {
-      nrosVisibles.forEach((valor) => {
-         if (valor.textContent.trim() === ingreso) {
-            valor.style.display = "flex"; // Mostrar el número que coincide
-            valor.style.backgroundColor = "var(--color-2)";
-            valor.style.color = "var(--color-1)";
-
-            ubicado = true; // Se encontró una coincidencia
-
-         } else {
-            valor.style.display = "none"; // Ocultar los demás números
-            valor.style.backgroundColor = "var(--color-1)";
-            valor.style.color = "var(--color-2)";
-
-         };
       });
-
-      if (ubicado) {
-         mensaje.textContent = `☠️ Número reportado como Spam`;
-
-      } else {
-         mensaje.textContent = "No se encontraron coincidencias";
-         // Mostrar todos los números si no hay coincidencias
-
-         nrosVisibles.forEach((valor) => {
-            valor.style.display = "flex";
-         });
-      };
+      mensaje.textContent = "Ingrese un número"; 
+      return;
    };
+   
+   nrosVisibles.forEach((elem) => {
+      
+      if (elem.textContent.match(ingreso)) {
+         elem.classList.remove("section1__none");
+         elem.style.backgroundColor = "var(--color-2)";
+         elem.style.color = "var(--color-1)";
+         mensaje.textContent = "Coincidencias";
+         
+      } else {
+         elem.classList.add("section1__none");
+         mensaje.textContent = "No se encontraron coincidencias";
+
+      };
+   });
 };
 
+document.addEventListener("keyup", ev => {
+   buscar(ev);
+});
+
 /* Evento para que al presionar enter se ejecute la funcion "buscar" */
-entrada.addEventListener("keydown", (ev) => {
+entrada.addEventListener("keyup", (ev) => {
    if (ev.code === "Enter") {
       buscar(ev);
    };
