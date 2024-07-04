@@ -21,17 +21,14 @@ compartir.addEventListener("click", () => {
    }, 5000);
 });
 
-let arreglo = ["972229776", "94651944", "956456207", "930143374", "962758201", "952414598", "924489743","942290145","964308333","973511215"];
+let arreglo = ["972229776", "94651944", "956456207", "930143374", "962758201", "952414598", "924489743", "942290145", "964308333", "973511215"];
 
 //----- Agregando números spam al DOM ----
-
 arreglo.forEach(spam => {
    seccionSpam.insertAdjacentHTML('beforeend', `<span class="section1__nro">${spam}</span>`);
-
 });
 
 //----- Buscador -----
-
 const nrosVisibles = document.querySelectorAll(".section1__nro");
 
 function buscar(ev) {
@@ -40,35 +37,34 @@ function buscar(ev) {
    if (ingreso === "") {
       nrosVisibles.forEach((elem) => {
          elem.classList.remove("section1__none");
-         elem.style.backgroundColor = ""; 
-         elem.style.color = ""; 
-
+            elem.style.backgroundColor = ""; 
+            elem.style.color = ""; 
       });
       mensaje.textContent = "Ingrese un número"; 
       return;
    };
-   
+
+   let found = false;
    nrosVisibles.forEach((elem) => {
-      
-      if (elem.textContent.match(ingreso)) {
+      if (elem.textContent.includes(ingreso)) {
          elem.classList.remove("section1__none");
          elem.style.backgroundColor = "var(--color-2)";
          elem.style.color = "var(--color-1)";
-         mensaje.textContent = "Coincidencias";
-         
+         found = true;
       } else {
          elem.classList.add("section1__none");
-         mensaje.textContent = "No se encontraron coincidencias";
-
-      };
+      }
    });
-};
+
+   mensaje.textContent = found ? "Coincidencias" : "No se encontraron coincidencias";
+}
 
 document.addEventListener("keyup", ev => {
    buscar(ev);
 });
 
-/* Evento para que al presionar enter se ejecute la funcion "buscar" */
+
+// Evento para que al presionar enter se ejecute la funcion "buscar"
 entrada.addEventListener("keyup", (ev) => {
    if (ev.code === "Enter") {
       buscar(ev);
@@ -80,7 +76,7 @@ entrada.addEventListener("keyup", (ev) => {
    };
 });
 
-/* Evento para que al dar click a un boton se ejecute la funcion "buscar" */
+// Evento para que al dar click a un boton se ejecute la funcion "buscar"
 gif.addEventListener("click", (ev) => {
    buscar(ev);
 });
