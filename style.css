@@ -78,12 +78,14 @@ body {
    padding: 10px 15px;
 }
 
-.header__gif {
-   max-width: 100%;
-   width: 45px;
+.header__trash {
+   background-color: var(--color-1);
+   color: var(--color-2);
+   display: flex;
+   font-size: 25px;
    border-radius: 5px;
    cursor: pointer;
-   box-shadow: 1px 2px 5px var(--color-2);
+   padding: 10px;
 }
 
 .header__mensaje {
